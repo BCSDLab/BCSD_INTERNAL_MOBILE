@@ -13,6 +13,7 @@ class InternalLibraryPlugin : Plugin<Project> {
             with(pluginManager) {
                 apply(libs.findPlugin("kotlinMultiplatform").get().get().pluginId)
                 apply(libs.findPlugin("androidLibrary").get().get().pluginId)
+                apply(libs.findPlugin("kotlinx-serialization").get().get().pluginId)
             }
 
             extensions.configure<LibraryExtension> {

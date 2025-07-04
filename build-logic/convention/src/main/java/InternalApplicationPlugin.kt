@@ -16,6 +16,7 @@ class InternalApplicationPlugin : Plugin<Project> {
                 apply(libs.findPlugin("composeMultiplatform").get().get().pluginId)
                 apply(libs.findPlugin("composeCompiler").get().get().pluginId)
                 apply(libs.findPlugin("composeHotReload").get().get().pluginId)
+                apply(libs.findPlugin("kotlinx-serialization").get().get().pluginId)
             }
 
             extensions.configure<ApplicationExtension> {
