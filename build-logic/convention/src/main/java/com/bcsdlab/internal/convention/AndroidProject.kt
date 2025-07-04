@@ -13,6 +13,10 @@ internal fun Project.configureAndroidProject(
             minSdk = libs.findVersion("android-minSdk").get().toString().toInt()
         }
 
+        buildFeatures {
+            buildConfig = true
+        }
+
         packaging {
             resources {
                 excludes += "/META-INF/{AL2.0,LGPL2.1}"

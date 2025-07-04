@@ -1,5 +1,6 @@
 package com.bcsdlab.internal.data
 
+import com.bcsdlab.internal.domain.enums.BuildType
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.HttpClientEngine
 import io.ktor.client.plugins.DefaultRequest
@@ -10,7 +11,7 @@ import io.ktor.client.plugins.logging.Logger
 import io.ktor.client.plugins.logging.Logging
 import io.ktor.serialization.kotlinx.json.json
 
-fun provideHttpClient(): HttpClient {
+fun provideHttpClient(buildType: BuildType): HttpClient {
     return HttpClient(httpClientEngine()) {
         install(Logging) {
             logger = Logger.DEFAULT
@@ -22,7 +23,7 @@ fun provideHttpClient(): HttpClient {
         }
 
         install(DefaultRequest) {
-            url(BASE_URL_STAGE) // TODO: Hardcode now
+            url(if (buildType == BuildType.Release) BASE_URL_PRODUCTION else BASE_URL_STAGE)
         }
     }
 }
