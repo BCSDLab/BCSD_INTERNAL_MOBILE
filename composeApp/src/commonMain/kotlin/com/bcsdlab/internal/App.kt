@@ -9,6 +9,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.bcsdlab.internal.data.di.networkModule
 import com.bcsdlab.internal.di.platformModule
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.core.KoinApplication
@@ -36,6 +37,9 @@ fun App() {
 internal fun internalAppDeclaration(
     additionalDeclaration: KoinApplication.() -> Unit = {},
 ): KoinAppDeclaration = {
-    modules(platformModule)
+    modules(
+        networkModule,
+        platformModule
+    )
     additionalDeclaration()
 }
