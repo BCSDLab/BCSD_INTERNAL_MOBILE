@@ -1,10 +1,9 @@
 root = true
 
-[**/build/**/*.kt]
-ktlint = disabled
 
 [*.{kt,kts}]
 ktlint_code_style = android_studio
+ktlint_standard_annotation = disabled
 ktlint_standard_package-name = disabled
 ktlint_standard_property-naming = disabled
 ktlint_standard_if-else-wrapping=disabled
@@ -12,6 +11,9 @@ ktlint_standard_discouraged-comment-location = disabled
 ktlint_standard_max-line-length = disabled
 ktlint_function_naming_ignore_when_annotated_with = Composable, IgnoreKtlint
 max_line_length = off
+
+[**/build/**/*.kt]
+ktlint = disabled
 
 [**/desktopMain/**/main.kt]
 ktlint_standard_filename = disabled
