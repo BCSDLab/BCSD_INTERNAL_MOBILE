@@ -17,6 +17,7 @@ class InternalFeaturePlugin : Plugin<Project> {
                 apply(libs.findPlugin("composeCompiler").get().get().pluginId)
                 apply(libs.findPlugin("composeHotReload").get().get().pluginId)
                 apply(libs.findPlugin("kotlinx-serialization").get().get().pluginId)
+                apply(libs.findPlugin("ktlint").get().get().pluginId)
             }
 
             extensions.configure<LibraryExtension> {
