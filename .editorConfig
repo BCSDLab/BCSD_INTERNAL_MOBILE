@@ -10,5 +10,5 @@ ktlint_standard_property-naming = disabled
 ktlint_standard_if-else-wrapping=disabled
 ktlint_standard_discouraged-comment-location = disabled
 ktlint_standard_max-line-length = disabled
-ktlint_function_naming_ignore_when_annotated_with = Composable
+ktlint_function_naming_ignore_when_annotated_with = Composable, IgnoreKtlint
 max_line_length = off
