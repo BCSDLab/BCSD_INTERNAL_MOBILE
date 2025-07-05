@@ -1,5 +1,6 @@
 import com.android.build.api.dsl.ApplicationExtension
 import com.bcsdlab.internal.convention.configureAndroidProject
+import com.bcsdlab.internal.convention.configureComposeProject
 import com.bcsdlab.internal.convention.configureMultiplatformProject
 import com.bcsdlab.internal.convention.libs
 import org.gradle.api.Plugin
@@ -26,6 +27,7 @@ class InternalApplicationPlugin : Plugin<Project> {
 
             extensions.configure<KotlinMultiplatformExtension> {
                 configureMultiplatformProject(this)
+                configureComposeProject(this)
             }
         }
     }
