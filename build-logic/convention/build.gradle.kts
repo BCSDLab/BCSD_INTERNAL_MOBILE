@@ -39,5 +39,9 @@ gradlePlugin {
             id = "com.bcsdlab.internal.plugin.library"
             implementationClass = "InternalLibraryPlugin"
         }
+        register("internalOrbit") {
+            id = "com.bcsdlab.internal.plugin.orbit"
+            implementationClass = "InternalOrbitPlugin"
+        }
     }
 }

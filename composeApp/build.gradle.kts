@@ -2,6 +2,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     alias(libs.plugins.internal.application)
+    alias(libs.plugins.internal.orbit)
 }
 
 kotlin {
