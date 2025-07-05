@@ -41,8 +41,8 @@ fun App() {
         }
 
         BackHandler {
-           navController.navigateUp()
-       }
+            navController.navigateUp()
+        }
     }
 }
 
