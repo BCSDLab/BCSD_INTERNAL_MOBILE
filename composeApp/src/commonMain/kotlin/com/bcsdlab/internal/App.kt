@@ -19,9 +19,10 @@ import org.koin.mp.KoinPlatform
 @Composable
 @Preview
 fun App() {
-    val platform = KoinPlatform.getKoin().get<Platform>().let {
-        "${it.model} with ${it.os}"
-    }
+    val platform =
+        KoinPlatform.getKoin().get<Platform>().let {
+            "${it.model} with ${it.os}"
+        }
     MaterialTheme {
         Scaffold(
             modifier = Modifier.windowInsetsPadding(WindowInsets.systemBars),
@@ -34,12 +35,11 @@ fun App() {
     }
 }
 
-internal fun internalAppDeclaration(
-    additionalDeclaration: KoinApplication.() -> Unit = {},
-): KoinAppDeclaration = {
-    modules(
-        networkModule,
-        platformModule
-    )
-    additionalDeclaration()
-}
+internal fun internalAppDeclaration(additionalDeclaration: KoinApplication.() -> Unit = {}): KoinAppDeclaration =
+    {
+        modules(
+            networkModule,
+            platformModule
+        )
+        additionalDeclaration()
+    }

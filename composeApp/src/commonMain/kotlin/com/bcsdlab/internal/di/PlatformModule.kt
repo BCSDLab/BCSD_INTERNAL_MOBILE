@@ -5,7 +5,8 @@ import com.bcsdlab.internal.getBuildType
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
-val platformModule = module {
-    singleOf(::Platform)
-    single { getBuildType() }
-}
+val platformModule =
+    module {
+        singleOf(::Platform)
+        single { getBuildType() }
+    }
