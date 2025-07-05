@@ -13,8 +13,9 @@ import com.bcsdlab.internal.data.di.networkModule
 import com.bcsdlab.internal.designsystem.theme.InternalTheme
 import com.bcsdlab.internal.di.platformModule
 import com.bcsdlab.internal.di.viewModelModule
-import com.bcsdlab.internal.navigation.InternalScreen
+import com.bcsdlab.internal.navigation.InternalRoute
 import com.bcsdlab.internal.navigation.internalRootGraph
+import io.ktor.utils.io.CancellationException
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.core.KoinApplication
 import org.koin.dsl.KoinAppDeclaration
@@ -32,7 +33,7 @@ fun App() {
             NavHost(
                 modifier = Modifier.padding(innerPadding),
                 navController = navController,
-                startDestination = InternalScreen.Main
+                startDestination = InternalRoute.Main
             ) {
                 internalRootGraph(
                     navController = navController
@@ -40,8 +41,16 @@ fun App() {
             }
         }
 
-        PredictiveBackHandler {
-            navController.navigateUp()
+        PredictiveBackHandler { progress ->
+            try {
+                progress.collect {
+                    navController.navigateUp()
+                }
+            } catch (_: CancellationException) {
+                // Do nothing
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
     }
 }

@@ -29,6 +29,8 @@ kotlin {
             implementation(project(":data"))
             implementation(project(":core"))
             implementation(project(":designsystem"))
+            implementation(project(":feature:main"))
+            implementation(project(":feature:signin"))
 
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.androidx.lifecycle.viewmodel)
