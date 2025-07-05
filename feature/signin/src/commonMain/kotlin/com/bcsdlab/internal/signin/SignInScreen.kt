@@ -15,6 +15,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import bcsdinternal.feature.signin.generated.resources.Res
+import bcsdinternal.feature.signin.generated.resources.sign_in_button
+import bcsdinternal.feature.signin.generated.resources.sign_in_login_id
+import bcsdinternal.feature.signin.generated.resources.sign_in_password
+import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.orbitmvi.orbit.compose.collectAsState
 import org.orbitmvi.orbit.compose.collectSideEffect
@@ -61,7 +66,12 @@ private fun SignInScreen(
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = loginId,
-            onValueChange = onLoginIdChange
+            onValueChange = onLoginIdChange,
+            label = {
+                Text(
+                    text = stringResource(Res.string.sign_in_login_id)
+                )
+            }
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -69,7 +79,12 @@ private fun SignInScreen(
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = password,
-            onValueChange = onPasswordChange
+            onValueChange = onPasswordChange,
+            label = {
+                Text(
+                    text = stringResource(Res.string.sign_in_password)
+                )
+            }
         )
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -77,7 +92,7 @@ private fun SignInScreen(
         Button(
             onClick = onSignIn
         ) {
-            Text("Sign in")
+            Text(stringResource(Res.string.sign_in_button))
         }
     }
 }
