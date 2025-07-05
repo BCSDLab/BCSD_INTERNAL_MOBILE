@@ -27,6 +27,7 @@ kotlin {
             implementation(project(":domain"))
             implementation(project(":data"))
             implementation(project(":core"))
+            implementation(project(":designsystem"))
 
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.androidx.lifecycle.viewmodel)
