@@ -9,7 +9,7 @@ import org.orbitmvi.orbit.viewmodel.container
 class SignInViewModel : ContainerHost<SignInState, SignInSideEffect>, ViewModel() {
     override val container: Container<SignInState, SignInSideEffect> = container(SignInState())
 
-    fun updateLoginId(loginId: String) = blockingIntent{
+    fun updateLoginId(loginId: String) = blockingIntent {
         reduce {
             state.copy(
                 loginId = loginId
