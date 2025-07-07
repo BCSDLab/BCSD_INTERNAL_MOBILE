@@ -24,7 +24,5 @@ internal fun Project.configureMultiplatformProject(
                 isStatic = true
             }
         }
-
-        jvm("desktop")
     }
 }

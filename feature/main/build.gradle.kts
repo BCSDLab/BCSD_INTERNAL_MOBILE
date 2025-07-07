@@ -5,8 +5,6 @@ plugins {
 
 kotlin {
     sourceSets {
-        val desktopMain by getting
-
         androidMain.dependencies {
         }
 
@@ -19,9 +17,6 @@ kotlin {
             implementation(libs.koin.compose)
             implementation(libs.koin.compose.viewmodel)
             implementation(libs.koin.compose.viewmodel.navigation)
-        }
-
-        desktopMain.dependencies {
         }
     }
 }

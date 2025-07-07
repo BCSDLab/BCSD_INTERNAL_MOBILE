@@ -4,8 +4,6 @@ plugins {
 
 kotlin {
     sourceSets {
-        val desktopMain by getting
-
         androidMain.dependencies {
             implementation(libs.ktor.client.okhttp)
             implementation(libs.kotlinx.coroutines.android)
@@ -24,11 +22,6 @@ kotlin {
 
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
-        }
-
-        desktopMain.dependencies {
-            implementation(libs.ktor.client.okhttp)
-            implementation(libs.kotlinx.coroutines.swing)
         }
     }
 }

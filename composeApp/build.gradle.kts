@@ -1,5 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-
 plugins {
     alias(libs.plugins.internal.application)
     alias(libs.plugins.internal.orbit)
@@ -16,8 +14,6 @@ kotlin {
     }
 
     sourceSets {
-        val desktopMain by getting
-
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -46,11 +42,6 @@ kotlin {
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
-
-        desktopMain.dependencies {
-            implementation(compose.desktop.currentOs)
-            implementation(libs.kotlinx.coroutines.swing)
-        }
     }
 }
 
@@ -73,16 +64,4 @@ android {
 
 dependencies {
     debugImplementation(compose.uiTooling)
-}
-
-compose.desktop {
-    application {
-        mainClass = "com.bcsdlab.internal.MainKt"
-
-        nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.bcsdlab.internal"
-            packageVersion = "1.0.0"
-        }
-    }
 }

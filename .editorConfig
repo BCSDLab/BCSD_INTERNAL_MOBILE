@@ -13,6 +13,3 @@ max_line_length = off
 
 [**/build/**/*.kt]
 ktlint = disabled
-
-[**/desktopMain/**/main.kt]
-ktlint_standard_filename = disabled
