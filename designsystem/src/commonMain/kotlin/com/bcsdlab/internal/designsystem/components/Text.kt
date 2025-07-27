@@ -35,7 +35,7 @@ fun Text(
     singleLine: Boolean = false,
     maxLines: Int = if (singleLine) 1 else Int.MAX_VALUE,
     minLines: Int = 1,
-    autoSize: TextAutoSize? = null,
+    autoSize: TextAutoSize? = null
 ) {
     BasicText(
         text = text,
@@ -50,4 +50,3 @@ fun Text(
         autoSize = autoSize
     )
 }
-

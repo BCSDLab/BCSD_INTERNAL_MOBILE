@@ -56,10 +56,10 @@ fun defaultInternalTypography() = InternalTypography(
 internal val DefaultTextStyle: TextStyle =
     TextStyle(
         lineHeightStyle =
-            LineHeightStyle(
-                alignment = LineHeightStyle.Alignment.Center,
-                trim = LineHeightStyle.Trim.None
-            ),
+        LineHeightStyle(
+            alignment = LineHeightStyle.Alignment.Center,
+            trim = LineHeightStyle.Trim.None
+        ),
         letterSpacing = 0.sp
     )
 
