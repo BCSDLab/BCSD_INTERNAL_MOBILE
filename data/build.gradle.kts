@@ -12,7 +12,12 @@ kotlin {
         commonMain.dependencies {
             implementation(project(":domain"))
             implementation(project.dependencies.platform(libs.koin.bom))
+
+            implementation(libs.androidx.datastore)
+            implementation(libs.androidx.datastore.preference)
+
             implementation(libs.koin.core)
+            implementation(libs.ktor.client.auth)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.client.logging)
