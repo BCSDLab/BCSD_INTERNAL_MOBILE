@@ -7,9 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -19,6 +16,9 @@ import bcsdinternal.feature.signin.generated.resources.Res
 import bcsdinternal.feature.signin.generated.resources.sign_in_button
 import bcsdinternal.feature.signin.generated.resources.sign_in_login_id
 import bcsdinternal.feature.signin.generated.resources.sign_in_password
+import com.bcsdlab.internal.designsystem.components.Button
+import com.bcsdlab.internal.designsystem.components.Text
+import com.bcsdlab.internal.designsystem.components.TextField
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 import org.orbitmvi.orbit.compose.collectAsState
@@ -63,28 +63,20 @@ private fun SignInScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        OutlinedTextField(
+        TextField(
             modifier = Modifier.fillMaxWidth(),
             value = loginId,
             onValueChange = onLoginIdChange,
-            label = {
-                Text(
-                    text = stringResource(Res.string.sign_in_login_id)
-                )
-            }
+            hint = stringResource(Res.string.sign_in_login_id)
         )
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        OutlinedTextField(
+        TextField(
             modifier = Modifier.fillMaxWidth(),
             value = password,
             onValueChange = onPasswordChange,
-            label = {
-                Text(
-                    text = stringResource(Res.string.sign_in_password)
-                )
-            }
+            hint = stringResource(Res.string.sign_in_password)
         )
 
         Spacer(modifier = Modifier.height(16.dp))
