@@ -9,6 +9,8 @@ kotlin {
         }
 
         commonMain.dependencies {
+            implementation(project(":designsystem"))
+
             implementation(project.dependencies.platform(libs.koin.bom))
 
             implementation(libs.koin.core)
