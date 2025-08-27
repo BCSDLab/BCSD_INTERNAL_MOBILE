@@ -1,10 +1,8 @@
-package com.bcsdlab.internal.data.di
+package com.bcsdlab.internal.data.di.datastore
 
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import com.bcsdlab.internal.data.createDataStore
-import com.bcsdlab.internal.data.dataStoreFileName
 import org.koin.dsl.module
 
 actual val dataModule = module {

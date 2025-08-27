@@ -1,5 +1,7 @@
-package com.bcsdlab.internal.data
+package com.bcsdlab.internal.data.di.network
 
+import com.bcsdlab.internal.data.BASE_URL_PRODUCTION
+import com.bcsdlab.internal.data.BASE_URL_STAGE
 import com.bcsdlab.internal.data.source.local.TokenLocalDataSource
 import com.bcsdlab.internal.domain.enums.BuildType
 import io.ktor.client.HttpClient

@@ -1,4 +1,4 @@
-package com.bcsdlab.internal.data.di
+package com.bcsdlab.internal.data.di.datastore
 
 import org.koin.core.module.Module
 

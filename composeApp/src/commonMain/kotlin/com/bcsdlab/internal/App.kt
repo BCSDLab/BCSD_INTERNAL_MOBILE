@@ -8,9 +8,9 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
-import com.bcsdlab.internal.data.di.dataModule
-import com.bcsdlab.internal.data.di.dataSourceModule
-import com.bcsdlab.internal.data.di.networkModule
+import com.bcsdlab.internal.data.di.datasource.dataSourceModule
+import com.bcsdlab.internal.data.di.datastore.dataModule
+import com.bcsdlab.internal.data.di.network.networkModule
 import com.bcsdlab.internal.designsystem.theme.InternalTheme
 import com.bcsdlab.internal.di.platformModule
 import com.bcsdlab.internal.di.viewModelModule

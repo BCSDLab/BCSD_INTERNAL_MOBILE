@@ -1,6 +1,5 @@
-package com.bcsdlab.internal.data.di
+package com.bcsdlab.internal.data.di.network
 
-import com.bcsdlab.internal.data.provideHttpClient
 import org.koin.dsl.module
 
 val networkModule =

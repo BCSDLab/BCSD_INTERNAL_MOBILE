@@ -1,4 +1,4 @@
-package com.bcsdlab.internal.data
+package com.bcsdlab.internal.data.di.datastore
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.PreferenceDataStoreFactory

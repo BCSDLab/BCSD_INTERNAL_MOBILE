@@ -1,9 +1,7 @@
-package com.bcsdlab.internal.data.di
+package com.bcsdlab.internal.data.di.datastore
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
-import com.bcsdlab.internal.data.createDataStore
-import com.bcsdlab.internal.data.dataStoreFileName
 import kotlinx.cinterop.ExperimentalForeignApi
 import org.koin.dsl.module
 import platform.Foundation.NSDocumentDirectory
