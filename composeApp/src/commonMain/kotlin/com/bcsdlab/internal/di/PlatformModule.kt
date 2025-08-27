@@ -8,5 +8,5 @@ import org.koin.dsl.module
 val platformModule =
     module {
         singleOf(::Platform)
-        single { getBuildType() }
+        singleOf(::getBuildType)
     }

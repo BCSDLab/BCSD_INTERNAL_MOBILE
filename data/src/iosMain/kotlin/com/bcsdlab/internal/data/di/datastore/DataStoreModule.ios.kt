@@ -3,6 +3,7 @@ package com.bcsdlab.internal.data.di.datastore
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
 import kotlinx.cinterop.ExperimentalForeignApi
+import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager
@@ -10,7 +11,7 @@ import platform.Foundation.NSURL
 import platform.Foundation.NSUserDomainMask
 
 actual val dataModule = module {
-    single { provideDataStore() }
+    singleOf(::provideDataStore)
 }
 
 @OptIn(ExperimentalForeignApi::class)
