@@ -23,7 +23,7 @@ fun provideDataStore(): DataStore<Preferences> = createDataStore(
             inDomain = NSUserDomainMask,
             appropriateForURL = null,
             create = false,
-            error = null,
+            error = null
         )
         requireNotNull(documentDirectory).path + "/$dataStoreFileName"
     }
