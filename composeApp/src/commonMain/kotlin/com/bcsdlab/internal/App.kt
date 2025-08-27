@@ -15,6 +15,7 @@ import com.bcsdlab.internal.data.di.repository.repositoryModule
 import com.bcsdlab.internal.designsystem.theme.InternalTheme
 import com.bcsdlab.internal.di.platformModule
 import com.bcsdlab.internal.di.viewModelModule
+import com.bcsdlab.internal.domain.di.useCaseModule
 import com.bcsdlab.internal.navigation.InternalRoute
 import com.bcsdlab.internal.navigation.internalRootGraph
 import org.jetbrains.compose.ui.tooling.preview.Preview
@@ -52,6 +53,7 @@ internal fun internalAppDeclaration(additionalDeclaration: KoinApplication.() ->
             dataSourceModule,
             repositoryModule,
             platformModule,
+            useCaseModule,
             viewModelModule
         )
         additionalDeclaration()
