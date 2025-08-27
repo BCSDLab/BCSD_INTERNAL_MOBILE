@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.bcsdlab.internal.data.di.dataModule
+import com.bcsdlab.internal.data.di.dataSourceModule
 import com.bcsdlab.internal.data.di.networkModule
 import com.bcsdlab.internal.designsystem.theme.InternalTheme
 import com.bcsdlab.internal.di.platformModule
@@ -47,6 +48,7 @@ internal fun internalAppDeclaration(additionalDeclaration: KoinApplication.() ->
         modules(
             networkModule,
             dataModule,
+            dataSourceModule,
             platformModule,
             viewModelModule
         )
