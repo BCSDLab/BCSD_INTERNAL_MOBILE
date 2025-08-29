@@ -10,7 +10,7 @@ kotlin {
         }
 
         commonMain.dependencies {
-            implementation(project(":domain"))
+            implementation(projects.domain)
             implementation(project.dependencies.platform(libs.koin.bom))
 
             implementation(libs.androidx.datastore)

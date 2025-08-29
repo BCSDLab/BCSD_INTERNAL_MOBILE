@@ -21,12 +21,12 @@ kotlin {
             implementation(libs.kotlinx.coroutines.android)
         }
         commonMain.dependencies {
-            implementation(project(":domain"))
-            implementation(project(":data"))
-            implementation(project(":core"))
-            implementation(project(":designsystem"))
-            implementation(project(":feature:main"))
-            implementation(project(":feature:signin"))
+            implementation(projects.domain)
+            implementation(projects.data)
+            implementation(projects.core)
+            implementation(projects.designsystem)
+            implementation(projects.feature.main)
+            implementation(projects.feature.signin)
 
             implementation(project.dependencies.platform(libs.koin.bom))
             implementation(libs.androidx.lifecycle.viewmodel)
